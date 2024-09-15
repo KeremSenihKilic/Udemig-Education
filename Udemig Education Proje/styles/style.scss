@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Hind+Guntur:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style: none;
+    
+    scroll-behavior: smooth;
+}
+
+//Links
+@import 'variables';
+@import 'header';
+@import 'main';
+@import './education';
+@import './aboutUS';
+@import './popularCourses';
+@import './contactUS';
+@import './footer';
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: 'Inter';
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+section {
+    padding: 70px 17% 60px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 17px 40px;
+    margin-top: 32px;
+    border-radius: 3px;
+    font-size: 19px;
+    font-weight: 700;
+    color: $tertiary-text-color;
+    background-color: $main-color;
+    text-shadow: 0px 0px 12px $tertiary-text-color;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+ @extend .transition ;
+    &:hover {
+        
+         color:$text-color ;
+         background-color: black;
+         border-radius: 10px;
+         border: 2px solid white;
+         transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 1200px) {
+   .home {
+    .home-text {
+        .btn {
+            padding: 14px 25px;
+            font-size: 13px;
+        }
+    }
+   }
+}

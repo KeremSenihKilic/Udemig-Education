@@ -1,0 +1,83 @@
+@import 'variables';
+@import 'global';
+
+.center-text {
+    text-align: center;
+    h2 {
+        font-size: $h2-font;
+        font-weight: 800;
+    }
+}
+
+.popular-courses-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    .box {
+        position: relative;
+        margin: 20px 0;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            //
+            display: block;
+            @extend .transition;
+            &:hover {
+                transform: scale(1.05);
+                filter: brightness(70%);
+                
+            }
+            
+           
+        }
+        h3 {
+            position: absolute;
+            left: 25px;
+            bottom: 85px;
+            font-weight: 500;
+            i {
+                color: $main-color;
+                margin-right: 10px;
+                text-shadow: 0px 0px 10px white;
+            }
+        }
+        h4 {
+            position: absolute;
+            left: 25px;
+            bottom: 65px;
+            font-weight: 500;
+            i {
+                color: $main-color;
+                margin-right: 10px;
+                text-shadow: 0px 0px 10px white;
+            }
+        }
+        h5 {
+            position: absolute;
+            left: 25px;
+            bottom: 45px;
+            font-weight: 500;
+            i {
+                color: $main-color;
+                margin-right: 10px;
+                text-shadow: 0px 0px 10px white;
+            }
+
+        }
+        h3,h4,h5 {
+            //display: none;
+          
+            
+        }
+       
+       
+        del {
+            font-size: 12px;
+        }
+    }
+}

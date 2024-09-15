@@ -1,0 +1,129 @@
+@import 'global';
+
+
+
+header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 25px 20px;
+    justify-content: space-between;
+    @extend .flex;
+
+    .logo{
+        font-size: 39px;
+        font-weight: 600;
+        font-family: 'Inter';
+        z-index: 1; //pins the logo or whatever class on place
+        span {
+            font-size: 43px;
+            color: $main-color;
+            font-weight: 700;
+
+           
+        }
+    }
+
+    .navbar { 
+           
+            @extend .flex;
+            gap: 10px;
+            font-family: 'Hind Guntur';
+            font-size: $p-font;
+           li {
+           
+           
+              a {
+                margin: 7px 12px;
+                left: 6px;
+                font-weight: 500;
+                @extend .transition;
+                
+                &:hover {
+                  color: $side-color;
+                }
+             }
+
+             .line {
+                height: 2px;
+                background-color: $side-color;
+                width: 0%;
+                transition: all .45s ease-in-out ;
+                
+             }
+
+              &:hover .line {
+                width: 100%;
+              }
+           }
+    }
+
+    .header-right {
+        @extend .flex ;
+
+        a {
+            font-size: 1rem;
+            color: $text-color;
+            margin-right: 18px;
+            margin-left: 5px;
+            font-family: 'Hind Guntur';
+            font-weight: 600;
+            @extend .transition ;
+            text-shadow: 2px 2.2px 8px $tertiary-text-color;
+
+            &:hover {
+              color: $side-color;
+              text-shadow: 4px 4px 10px $main-color;
+            }
+
+           i {
+            font-size: 20px;
+            @extend .transition;
+
+            &:hover{
+                transform: translateY(-3px); //helps us move whatever we want in y and x axis
+                color: $side-color;
+                text-shadow: 4px 4px 10px $main-color;
+            }
+           }
+        }
+      
+    }
+}
+
+// Responsive functions
+
+@media (max-width: 1215px) {
+       .navbar li  {
+        display: none;
+       }
+       
+    }
+
+
+@media (max-width: 950px) {
+  .header-right a:nth-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+   header  {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .header-right i {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+ .logo {
+  font-size: 21px;
+ }
+}
+

@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'global';
+
+#about-us {
+    display: block;
+ 
+    align-items: center;
+    gap: 2rem;
+    
+
+    .about-us-img img{
+        width: 30%;
+        height: auto;
+        border-radius: 10px;
+        
+    }
+
+    .about-us-text {
+        font-family: 'Inter';
+        cursor: pointer;
+         h5 {
+            font-size: 22px;
+            font-weight: 600;
+            color: $main-color;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+         }
+
+       
+
+         h2 {
+            font-size: $h3-font;
+            font-weight: 800;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+          
+         }
+
+         p {
+            font-weight: 500;
+            font-size: $p-font;
+            line-height: 30px;
+            margin-bottom: 35px;
+            
+            
+         }
+
+         span {
+            color: $side-color;
+            font-weight: 700;
+         }
+
+         
+    }
+}
+
+@media (max-width: 1000px) {
+    #about-us {
+      display: flex;
+      flex-direction: column;
+      // Display flex yapısı elemanları yan yana getirir.Bu yapı aktif edildiğinde  flex-direction özelliği kullanılır hale gelir. flex-direction özelliği flex yapısı aktif olan elemanların nasıl sıralanacağını belirler.Bu özelliğin default değeri 'row' dur.
+    }
+  }
